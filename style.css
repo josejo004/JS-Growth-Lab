@@ -562,6 +562,13 @@ body::after{
   .hero-text p { font-size: 14px; }
   .hero-corner-cta__btn { padding: 12px 22px; font-size: 14px; }
 }
+@media (max-width:768px){
+
+.hero-slide{
+    background-position:center top;
+}
+
+}
 /* ============ ABOUT ============ */
 .about__inner {
   display: grid;
