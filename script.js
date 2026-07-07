@@ -305,3 +305,18 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     }
   });
 });
+const socialFloating = document.querySelector(".social-floating");
+const hero = document.getElementById("home");
+
+function toggleSocialIcons() {
+    const heroBottom = hero.offsetTop + hero.offsetHeight;
+
+    if (window.scrollY < heroBottom - 100) {
+        socialFloating.style.display = "none";
+    } else {
+        socialFloating.style.display = "flex";
+    }
+}
+
+window.addEventListener("scroll", toggleSocialIcons);
+window.addEventListener("load", toggleSocialIcons);
