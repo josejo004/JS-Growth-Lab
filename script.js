@@ -161,6 +161,7 @@ hamburger.addEventListener('click', () => {
   hamburger.classList.toggle('open', isOpen);
   hamburger.setAttribute('aria-expanded', isOpen);
   document.body.style.overflow = isOpen ? 'hidden' : '';
+	document.body.classList.toggle('menu-open', isOpen);
 });
 
 // Close nav on link click
