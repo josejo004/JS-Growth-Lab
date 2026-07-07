@@ -283,7 +283,7 @@ body::after{
   padding: 8px;
   background: none;
   border: none;
-  z-index: 1001;
+  z-index: 10002;
 }
 .hamburger span {
   display: block;
@@ -1113,17 +1113,24 @@ body::after{
 
   /* Nav */
   .hamburger { display: flex; }
-  .nav {
+ .nav{
     position: fixed;
-    top: 0; right: 0; bottom: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+
     width: min(320px, 90vw);
-    background: var(--black2);
+
+    background: #0506F;   /* Solid black */
+    opacity: 1;
+
     padding: 100px 32px 40px;
+
     transform: translateX(100%);
-    transition: transform var(--transition);
-    box-shadow: -8px 0 40px rgba(0,0,0,0.5);
-    z-index: 999;
-  }
+    transition: transform .3s ease;
+
+    z-index: 10001;
+}
   .nav.open { transform: translateX(0); }
   .nav__list { flex-direction: column; gap: 4px; }
   .nav__link { font-size: 16px; padding: 12px 16px; display: block; }
@@ -1247,4 +1254,10 @@ body::after{
 
 .whatsapp{
   background:#25D366;
+}
+body.menu-open .hero__texts,
+body.menu-open .hero-corner-cta,
+body.menu-open .hero-dots{
+    opacity:0;
+    pointer-events:none;
 }
