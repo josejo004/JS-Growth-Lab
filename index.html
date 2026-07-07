@@ -44,26 +44,72 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
   <main>
 
     <!-- ============ HERO ============ -->
-    <section class="hero" id="home" aria-label="Hero">
+    <section class="hero" id="home">
+
+      <!-- Background slider — 5 images, Ken Burns zoom/pan on each -->
+      <div class="hero-bg" id="heroBg">
+        <div class="hero-slide active" style="background-image:url('images/image-1.png')"></div>
+        <div class="hero-slide" style="background-image:url('images/image-2.png')"></div>
+        <div class="hero-slide" style="background-image:url('images/image-3.png')"></div>
+        <div class="hero-slide" style="background-image:url('images/image 4.jpeg')"></div>
+        <div class="hero-slide" style="background-image:url('images/image-5.png')"></div>
+      </div>
+
+      <!-- Animated purple + blue gradient wash -->
+      <div class="hero-gradient" aria-hidden="true"></div>
+
+      <!-- Cursor-reactive purple glow -->
+      <div class="hero-glow" id="heroGlow" aria-hidden="true"></div>
+
+      <!-- Dark overlay for text contrast -->
+      <div class="hero-overlay"></div>
+
       <div class="container hero__inner">
-        <div class="hero__content reveal">
-          <span class="hero__eyebrow">Digital Agency</span>
-          <h1 class="hero__headline">Build Your Website. <span class="highlight">Grow Your Business.</span></h1>
-          <p class="hero__sub">We build modern websites and digital marketing solutions that help businesses attract customers and grow online — fast, affordable, and built to last.</p>
-			
-          <div class="hero__actions">
-            <a href="#contact" class="btn btn--primary">Get a Free consultation</a>
-            <a href="#portfolio" class="btn btn--outline">View Portfolio</a>
+
+        <!-- One text block per slide — only the active one shows -->
+        <div class="hero__texts" id="heroTexts">
+
+          <div class="hero-text active" data-slide="0">
+            <span class="hero__eyebrow">Creative Web Design</span>
+            <h1>Build <span class="highlight">Modern Websites</span> That Grow Your Business</h1>
+            <p>Fast, mobile-first websites designed to turn visitors into loyal customers.</p>
           </div>
+
+          <div class="hero-text" data-slide="1">
+            <span class="hero__eyebrow">SEO That Works</span>
+            <h1>Get Found First On <span class="highlight">Google</span></h1>
+            <p>Rank higher, drive organic traffic, and reach customers who are already searching for you.</p>
           </div>
-		  <div class="hero__slider">
-    <img src="images/image-one.png" class="slide active" alt="Website Development">
-    <img src="images/image-two.png" class="slide" alt="Digital Marketing Team">
-    <img src="images/image-third.png" class="slide" alt="Happy Customer">
-</div>
+
+          <div class="hero-text" data-slide="2">
+            <span class="hero__eyebrow">Digital Marketing</span>
+            <h1>Campaigns That <span class="highlight">Convert</span></h1>
+            <p>Targeted marketing across social, email, and ads that bring real, measurable results.</p>
+          </div>
+
+          <div class="hero-text" data-slide="3">
+            <span class="hero__eyebrow">Branding &amp; Identity</span>
+            <h1>Tell Your Story With <span class="highlight">Bold Branding</span></h1>
+            <p>Logos, content, and visual identity that make your business unforgettable.</p>
+          </div>
+
+          <div class="hero-text" data-slide="4">
+            <span class="hero__eyebrow">Ongoing Growth</span>
+            <h1>We Grow With You, <span class="highlight">Every Step</span></h1>
+            <p>Maintenance, support, and strategy that keep your website working long after launch.</p>
+          </div>
+
         </div>
-      <div class="hero__wave" aria-hidden="true">
-        <svg viewBox="0 0 1440 80" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none"><path d="M0,40 C360,80 1080,0 1440,40 L1440,80 L0,80 Z" fill="#F8FAFC"/></svg>
+
+        <!-- Corner CTA — pinned to the right, styled like the portfolio tags/buttons -->
+        <a href="#contact" class="hero-corner-cta">
+          <span class="hero-corner-cta__tag">Let's Talk</span>
+          <span class="hero-corner-cta__btn">Get Started →</span>
+        </a>
+
+        <!-- Slide indicator dots -->
+        <div class="hero-dots" id="heroDots" aria-hidden="true"></div>
+
       </div>
     </section>
 
