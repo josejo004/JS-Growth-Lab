@@ -761,12 +761,24 @@ body::after{
   transform: translateY(-6px);
   box-shadow: var(--shadow-lg);
 }
-.portfolio-card__img {
-  height: 220px;
-  position: relative;
-  overflow: hidden;
-  background-size: cover;
-  background-position: center;
+.portfolio-card__img{
+    position:relative;
+    width:100%;
+    height:260px;
+    overflow:hidden;
+    border-radius:14px 14px 0 0;
+}
+.portfolio-card__img img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    object-position:top;
+    display:block;
+    transition:transform .5s ease;
+}
+
+.portfolio-card:hover .portfolio-card__img img{
+    transform:scale(1.05);
 }
 .portfolio-card__img--1 {
   background: linear-gradient(135deg, #05060F 0%, #111C40 50%, #0D6EFF 100%);
